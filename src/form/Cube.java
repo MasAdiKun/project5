@@ -4,6 +4,9 @@
  */
 package form;
 import core.CubeO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -271,8 +274,8 @@ public class Cube extends javax.swing.JFrame {
         model.addColumn("Result");
     }
     private void cleanText(){
-        tf_num.setText(" ");
-        l_results.setText(" ");
+        tf_num.setText("");
+        l_results.setText("");
     }
     public void cleanTable()
 	{
@@ -308,7 +311,28 @@ public class Cube extends javax.swing.JFrame {
         bck.setVisible(true);
         this.dispose();
     }
-    
+    private String validateForm() {
+        List<String> flag = new ArrayList<String>();
+        String alert = "";
+        
+        String num = tf_num.getText();
+        
+        if(num.length() < 1) {
+            flag.add("Side field must be filled");
+        }
+        
+        if(!num.matches("[0-9.]+")){
+            flag.add("Side field only accept number!");
+        }
+        
+        if (flag.size() > 0) {
+            for (String msg : flag) {
+                alert += (msg + "\n");
+            }
+        }
+        
+        return alert;
+    }
     private void btn_surfaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_surfaceActionPerformed
         // TODO add your handling code here:
         l_formula.setText(cu.FormulaSurfaceArea());
@@ -329,6 +353,12 @@ public class Cube extends javax.swing.JFrame {
 
     private void btn_resultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resultActionPerformed
         // TODO add your handling code here:
+        String validation = this.validateForm();
+        
+        if(validation.length() > 0) {
+            JOptionPane.showMessageDialog(null, validation, "Validation Error!", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
         if(btn_volume.isSelected()){
             setVolume();
             store();
