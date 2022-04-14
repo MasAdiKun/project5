@@ -36,6 +36,7 @@ public class Rectangle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        groupAP = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         btn_perimeter = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
@@ -61,6 +62,7 @@ public class Rectangle extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
 
         btn_perimeter.setBackground(new java.awt.Color(0, 51, 51));
+        groupAP.add(btn_perimeter);
         btn_perimeter.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_perimeter.setForeground(new java.awt.Color(255, 255, 255));
         btn_perimeter.setText("Perimeter");
@@ -80,6 +82,7 @@ public class Rectangle extends javax.swing.JFrame {
         l_formula.setText("The Formula for :");
 
         btn_area.setBackground(new java.awt.Color(0, 51, 51));
+        groupAP.add(btn_area);
         btn_area.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_area.setForeground(new java.awt.Color(255, 255, 255));
         btn_area.setText("Area");
@@ -452,6 +455,7 @@ public class Rectangle extends javax.swing.JFrame {
     private javax.swing.JButton btn_clear;
     private javax.swing.JRadioButton btn_perimeter;
     private javax.swing.JButton btn_result;
+    private javax.swing.ButtonGroup groupAP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

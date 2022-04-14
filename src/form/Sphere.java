@@ -36,6 +36,7 @@ public class Sphere extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        groupVS = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         l_dim = new javax.swing.JLabel();
         btn_surface = new javax.swing.JRadioButton();
@@ -64,6 +65,7 @@ public class Sphere extends javax.swing.JFrame {
         l_dim.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btn_surface.setBackground(new java.awt.Color(0, 51, 51));
+        groupVS.add(btn_surface);
         btn_surface.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_surface.setForeground(new java.awt.Color(255, 255, 255));
         btn_surface.setText("Surface Area");
@@ -83,6 +85,7 @@ public class Sphere extends javax.swing.JFrame {
         l_formula.setText("The Formula for :");
 
         btn_volume.setBackground(new java.awt.Color(0, 51, 51));
+        groupVS.add(btn_volume);
         btn_volume.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_volume.setForeground(new java.awt.Color(255, 255, 255));
         btn_volume.setText("Volume");
@@ -422,6 +425,7 @@ public class Sphere extends javax.swing.JFrame {
     private javax.swing.JButton btn_result;
     private javax.swing.JRadioButton btn_surface;
     private javax.swing.JRadioButton btn_volume;
+    private javax.swing.ButtonGroup groupVS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

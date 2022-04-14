@@ -34,7 +34,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btn_main1 = new javax.swing.JButton();
         bnt_main2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btn_quit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,10 +74,10 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Quit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_quit.setText("Quit");
+        btn_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_quitActionPerformed(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(289, 289, 289)
-                        .addComponent(jButton1)))
+                        .addComponent(btn_quit)))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -126,7 +126,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(bnt_main2)
                 .addGap(35, 35, 35)
-                .addComponent(jButton1)
+                .addComponent(btn_quit)
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -158,10 +158,10 @@ public class MainMenu extends javax.swing.JFrame {
         this.dispose();                   
     }//GEN-LAST:event_bnt_main2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_quitActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btn_quitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,7 +201,7 @@ public class MainMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bnt_main2;
     private javax.swing.JButton btn_main1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_quit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

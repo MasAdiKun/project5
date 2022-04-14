@@ -35,7 +35,7 @@ public class Square extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        groupAP = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         btn_perimeter = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
@@ -53,14 +53,13 @@ public class Square extends javax.swing.JFrame {
         l_dim = new javax.swing.JLabel();
         btn_back = new javax.swing.JButton();
 
-        jButton1.setText("jButton1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
 
         btn_perimeter.setBackground(new java.awt.Color(0, 51, 51));
+        groupAP.add(btn_perimeter);
         btn_perimeter.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_perimeter.setForeground(new java.awt.Color(255, 255, 255));
         btn_perimeter.setText("Perimeter");
@@ -80,6 +79,7 @@ public class Square extends javax.swing.JFrame {
         l_formula.setText("The Formula for :");
 
         btn_area.setBackground(new java.awt.Color(0, 51, 51));
+        groupAP.add(btn_area);
         btn_area.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_area.setForeground(new java.awt.Color(255, 255, 255));
         btn_area.setText("Area");
@@ -334,6 +334,8 @@ public class Square extends javax.swing.JFrame {
         
         return alert;
     }
+    
+    
     private void btn_resultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resultActionPerformed
         // TODO add your handling code here:
         String validation = this.validateForm();
@@ -345,9 +347,10 @@ public class Square extends javax.swing.JFrame {
         if(btn_area.isSelected()){
             setArea();
             store();
-        }else {
+        }
+        if(btn_perimeter.isSelected()){
             setPerimeter();
-            store();            
+            store();
         }
     }//GEN-LAST:event_btn_resultActionPerformed
 
@@ -364,7 +367,6 @@ public class Square extends javax.swing.JFrame {
         l_formula.setText(sq.FormulaArea());
         jPanel2.setVisible(true);
         l_result.setText("Area");
-        
         cleanText();
         cleanTable();
     }//GEN-LAST:event_btn_areaActionPerformed
@@ -428,7 +430,7 @@ public class Square extends javax.swing.JFrame {
     private javax.swing.JButton btn_clear;
     private javax.swing.JRadioButton btn_perimeter;
     private javax.swing.JButton btn_result;
-    private javax.swing.JButton jButton1;
+    private javax.swing.ButtonGroup groupAP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

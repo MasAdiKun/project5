@@ -35,6 +35,7 @@ public class Circle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        groupAP = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         l_dim = new javax.swing.JLabel();
         btn_perimeter = new javax.swing.JRadioButton();
@@ -63,6 +64,7 @@ public class Circle extends javax.swing.JFrame {
         l_dim.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btn_perimeter.setBackground(new java.awt.Color(0, 51, 51));
+        groupAP.add(btn_perimeter);
         btn_perimeter.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_perimeter.setForeground(new java.awt.Color(255, 255, 255));
         btn_perimeter.setText("Perimeter");
@@ -82,6 +84,7 @@ public class Circle extends javax.swing.JFrame {
         l_formula.setText("The Formula for :");
 
         btn_area.setBackground(new java.awt.Color(0, 51, 51));
+        groupAP.add(btn_area);
         btn_area.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btn_area.setForeground(new java.awt.Color(255, 255, 255));
         btn_area.setText("Area");
@@ -418,6 +421,7 @@ private void initTable() {
     private javax.swing.JButton btn_clear;
     private javax.swing.JRadioButton btn_perimeter;
     private javax.swing.JButton btn_result;
+    private javax.swing.ButtonGroup groupAP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
