@@ -161,7 +161,10 @@ public class MainMenu extends javax.swing.JFrame {
     private void btn_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_quitActionPerformed
         // TODO add your handling code here:
         System.exit(0);
+
     }//GEN-LAST:event_btn_quitActionPerformed
+                                      
+
 
     /**
      * @param args the command line arguments
