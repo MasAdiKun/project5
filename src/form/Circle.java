@@ -272,10 +272,12 @@ private void initTable() {
         // Menambahkan kolom awal pada bagian atas
         model.addColumn("Result");
     }
+
     private void cleanText(){
         tf_num.setText("");
         l_results.setText("");
     }
+    
     public void cleanTable()
 	{
 		int row = model.getRowCount();
@@ -292,24 +294,28 @@ private void initTable() {
         };
         this.model.addRow(obj);
     }
+    
     private void setArea(){
         double a = 0;
         a =Double.parseDouble(tf_num.getText());
         this.cr.setArea(a);
         l_results.setText(String.valueOf(this.cr.getArea()));
     }
+    
     private void setPerimeter(){
         double a = 0;
         a =Double.parseDouble(tf_num.getText());
         this.cr.setPerimeter(a);
         l_results.setText(String.valueOf(this.cr.getPerimeter()));
     }
+    
     private void back(){
         PlaneMain bck = new PlaneMain();
         bck.setLocationRelativeTo(null);
         bck.setVisible(true);
         this.dispose();
     }
+    
     private String validateForm() {
         List<String> flag = new ArrayList<String>();
         String alert = "";
@@ -332,6 +338,7 @@ private void initTable() {
         
         return alert;
     }
+    
     private void btn_perimeterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_perimeterActionPerformed
         // TODO add your handling code here:
         l_formula.setText(cr.FormulaPerimeter());

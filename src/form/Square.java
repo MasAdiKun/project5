@@ -272,11 +272,11 @@ public class Square extends javax.swing.JFrame {
         // Menambahkan kolom awal pada bagian atas
         model.addColumn("Result");
     }
+    
     private void cleanText(){
         tf_num.setText("");
         l_results.setText("");
     }
-    
     
     public void cleanTable()
 	{
@@ -294,24 +294,28 @@ public class Square extends javax.swing.JFrame {
         };
         this.model.addRow(obj);
     }
+    
     private void setArea(){
         double a = 0;
         a = Double.parseDouble(tf_num.getText());
         this.sq.setArea(a);
         l_results.setText(String.valueOf(this.sq.getArea()));
     }
+    
     private void setPerimeter(){
         double a = 0;
         a =Double.parseDouble(tf_num.getText());
         this.sq.setPerimeter(a);
         l_results.setText(String.valueOf(this.sq.getPerimeter()));
     }
+    
     private void back(){
         PlaneMain bck = new PlaneMain();
         bck.setLocationRelativeTo(null);
         bck.setVisible(true);
         this.dispose();
     }
+    
     private String validateForm() {
         List<String> flag = new ArrayList<String>();
         String alert = "";
@@ -334,8 +338,7 @@ public class Square extends javax.swing.JFrame {
         
         return alert;
     }
-    
-    
+        
     private void btn_resultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resultActionPerformed
         // TODO add your handling code here:
         String validation = this.validateForm();

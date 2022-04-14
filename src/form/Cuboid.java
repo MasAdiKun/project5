@@ -302,12 +302,14 @@ public class Cuboid extends javax.swing.JFrame {
         // Menambahkan kolom awal pada bagian atas
         model.addColumn("Result");
     }
+    
     private void cleanText(){
         tf_num.setText("");
         tf_num1.setText("");
         tf_num2.setText("");
         l_results.setText("");
     }
+    
     public void cleanTable()
 	{
 		int row = model.getRowCount();
@@ -324,6 +326,7 @@ public class Cuboid extends javax.swing.JFrame {
         };
         this.model.addRow(obj);
     }
+    
     private void setVolume(){
         double a,b,c = 0;
         a =Double.parseDouble(tf_num.getText());
@@ -332,6 +335,7 @@ public class Cuboid extends javax.swing.JFrame {
         this.cb.setVolume(a,b,c);
         l_results.setText(String.valueOf(this.cb.getVolume()));
     }
+    
     private void setSurfaceArea(){
         double a,b,c = 0;
         a =Double.parseDouble(tf_num.getText());
@@ -340,12 +344,14 @@ public class Cuboid extends javax.swing.JFrame {
         this.cb.setSurfaceArea(a,b,c);
         l_results.setText(String.valueOf(this.cb.getSurfaceArea()));
     }
+    
     private void back(){
         SolidMain bck = new SolidMain();
         bck.setLocationRelativeTo(null);
         bck.setVisible(true);
         this.dispose();
     }
+    
     private String validateForm() {
         List<String> flag = new ArrayList<String>();
         String alert = "";
@@ -390,6 +396,7 @@ public class Cuboid extends javax.swing.JFrame {
         
         return alert;
     }
+    
     private void btn_surfaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_surfaceActionPerformed
         // TODO add your handling code here:
         l_formula.setText(cb.FormulaSurfaceArea());

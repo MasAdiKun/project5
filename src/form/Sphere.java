@@ -277,10 +277,12 @@ public class Sphere extends javax.swing.JFrame {
         // Menambahkan kolom awal pada bagian atas
         model.addColumn("Result");
     }
+    
     private void cleanText(){
         tf_num.setText("");
         l_results.setText("");
     }
+    
     public void cleanTable()
 	{
 		int row = model.getRowCount();
@@ -297,24 +299,28 @@ public class Sphere extends javax.swing.JFrame {
         };
         this.model.addRow(obj);
     }
+    
     private void setVolume(){
         double a = 0;
         a =Double.parseDouble(tf_num.getText());
         this.sp.setVolume(a);
         l_results.setText(String.valueOf(this.sp.getVolume()));
     }
+    
     private void setSurfaceArea(){
         double a = 0;
         a =Double.parseDouble(tf_num.getText());
         this.sp.setSurfaceArea(a);
         l_results.setText(String.valueOf(this.sp.getSurfaceArea()));
     }
+    
     private void back(){
         SolidMain bck = new SolidMain();
         bck.setLocationRelativeTo(null);
         bck.setVisible(true);
         this.dispose();
     }
+    
     private String validateForm() {
         List<String> flag = new ArrayList<String>();
         String alert = "";
@@ -322,11 +328,11 @@ public class Sphere extends javax.swing.JFrame {
         String num = tf_num.getText();
         
         if(num.length() < 1) {
-            flag.add("Side field must be filled");
+            flag.add("Radius field must be filled");
         }
         
         if(!num.matches("[0-9.]+")){
-            flag.add("Side field only accept number!");
+            flag.add("Radius field only accept number!");
         }
         
         if (flag.size() > 0) {
@@ -337,6 +343,7 @@ public class Sphere extends javax.swing.JFrame {
         
         return alert;
     }
+    
     private void btn_surfaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_surfaceActionPerformed
         // TODO add your handling code here:
         l_formula.setText(sp.FormulaSurfaceArea());

@@ -289,6 +289,7 @@ public class Rectangle extends javax.swing.JFrame {
         // Menambahkan kolom awal pada bagian atas
         model.addColumn("Result");
     }
+    
     private void cleanText(){
         tf_num.setText("");
         tf_num1.setText("");
@@ -311,6 +312,7 @@ public class Rectangle extends javax.swing.JFrame {
         };
         this.model.addRow(obj);
     }
+    
     private void setArea(){
         double a,b = 0;
         a =Double.parseDouble(tf_num.getText());
@@ -318,6 +320,7 @@ public class Rectangle extends javax.swing.JFrame {
         this.rc.setArea(a,b);
         l_results.setText(String.valueOf(this.rc.getArea()));
     }
+    
     private void setPerimeter(){
         double a,b = 0;
         a =Double.parseDouble(tf_num.getText());
@@ -325,12 +328,14 @@ public class Rectangle extends javax.swing.JFrame {
         this.rc.setPerimeter(a,b);
         l_results.setText(String.valueOf(this.rc.getPerimeter()));
     }
+    
     private void back(){
         PlaneMain bck = new PlaneMain();
         bck.setLocationRelativeTo(null);
         bck.setVisible(true);
         this.dispose();
     }
+    
     private String validateForm() {
         List<String> flag = new ArrayList<String>();
         String alert = "";
@@ -357,7 +362,6 @@ public class Rectangle extends javax.swing.JFrame {
             flag.add("Width field only accept number!");
         }
         
-        
         if (flag.size() > 0) {
             for (String msg : flag) {
                 alert += (msg + "\n");
@@ -366,6 +370,7 @@ public class Rectangle extends javax.swing.JFrame {
         
         return alert;
     }
+    
     private void btn_perimeterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_perimeterActionPerformed
         // TODO add your handling code here:
         l_formula.setText(rc.FormulaPerimeter());
